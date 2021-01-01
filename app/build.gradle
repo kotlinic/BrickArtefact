@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.hzy.chinese.jchess"
         minSdkVersion 15
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 5
         versionName "1.0.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
