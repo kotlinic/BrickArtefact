@@ -3,14 +3,12 @@ package com.demo.plugin
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
 import com.android.utils.FileUtils
-import com.demo.lib.annotations.Cost
 import org.apache.commons.codec.digest.DigestUtils
 import org.objectweb.asm.*
 import org.objectweb.asm.commons.AdviceAdapter
 
 import java.util.jar.JarEntry
 import java.util.jar.JarFile
-
 /**
  * 时间统计transform
  *
@@ -219,7 +217,7 @@ class CostTransform extends Transform {
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false)
                 mv.visitLdcInsn(methodName)
                 mv.visitMethodInsn(INVOKESTATIC, "java/lang/System", "nanoTime", "()J", false)
-                mv.visitMethodInsn(INVOKESTATIC, "main/java/TimeCache", "setStartTime", "(Ljava/lang/String;J)V", false)
+                mv.visitMethodInsn(INVOKESTATIC, "TimeCache", "setStartTime", "(Ljava/lang/String;J)V", false)
             }
         }
 
@@ -228,10 +226,10 @@ class CostTransform extends Transform {
             if (inject) {
                 mv.visitLdcInsn(methodName)
                 mv.visitMethodInsn(INVOKESTATIC, "java/lang/System", "nanoTime", "()J", false)
-                mv.visitMethodInsn(INVOKESTATIC, "main/java/TimeCache", "setEndTime", "(Ljava/lang/String;J)V", false)
+                mv.visitMethodInsn(INVOKESTATIC, "TimeCache", "setEndTime", "(Ljava/lang/String;J)V", false)
                 mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;")
                 mv.visitLdcInsn(methodName)
-                mv.visitMethodInsn(INVOKESTATIC, "main/java/TimeCache", "getCostTime", "(Ljava/lang/String;)Ljava/lang/String;", false)
+                mv.visitMethodInsn(INVOKESTATIC, "TimeCache", "getCostTime", "(Ljava/lang/String;)Ljava/lang/String;", false)
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false)
                 mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;")
                 mv.visitLdcInsn("========end=========")

@@ -1,5 +1,3 @@
-package com.demo.lib.annotations;
-
 import java.util.HashMap;
 import java.util.Map;
 

@@ -16,4 +16,28 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/getUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kotlinic" />
+
+    <Button
+        android:id="@+id/removeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/getUser"
+        android:text="移除用户" />
+
+    <Button
+        android:id="@+id/getArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/removeUser"
+        android:text="获取文章" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
