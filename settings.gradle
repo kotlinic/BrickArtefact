@@ -1,2 +1,3 @@
 rootProject.name='Asm'
 include ':app'
+include ':lib'
