@@ -1,0 +1,3 @@
+javap -c D:\work2020\zm-bytecode\lib\build\classes\java\main\com\plugin\lib\MyClass.class  > bytecode\aa.txt
+
+java -jar D:\360极速浏览器下载\Bytecode-Viewer-2.9.22.jar

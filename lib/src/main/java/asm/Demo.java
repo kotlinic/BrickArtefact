@@ -5,6 +5,6 @@ package asm;
  */
 public class Demo {
     public void getDemoInfo() {
-        System.out.println("getDemoInfo被调用...");
+        System.out.println("getDemoInfo被调用...Java Virtual Machine Specification");
     }
 }
