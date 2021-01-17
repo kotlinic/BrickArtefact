@@ -58,7 +58,7 @@ public class Helloworld extends ClassLoader implements Opcodes {
 
 
         //将二进制流写到本地磁盘上
-        FileOutputStream fos = new FileOutputStream("zm.Example.class");
+        FileOutputStream fos = new FileOutputStream("bytecode/Example.class");
         fos.write(code);
         fos.close();
 

@@ -131,7 +131,7 @@ public class MyClassDump implements Opcodes {
     public static void main(String[] args) throws Exception {
         byte[] code=dump();
         //将二进制流写到本地磁盘上
-        FileOutputStream fos = new FileOutputStream("MyClassDumpJava.class");
+        FileOutputStream fos = new FileOutputStream("bytecode/MyClassDumpJava.class");
         fos.write(code);
         fos.close();
 
