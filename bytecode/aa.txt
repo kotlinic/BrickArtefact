@@ -6,10 +6,46 @@ public class com.plugin.lib.MyClass {
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
        4: return
 
+  public void init(int);
+    Code:
+       0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: new           #3                  // class java/lang/StringBuilder
+       6: dup
+       7: invokespecial #4                  // Method java/lang/StringBuilder."<init>":()V
+      10: ldc           #5                  // String init...
+      12: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      15: iload_1
+      16: invokevirtual #7                  // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      19: invokevirtual #8                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      22: invokevirtual #9                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      25: return
+
   public static void main(java.lang.String[]);
     Code:
        0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
-       3: ldc           #3                  // String zm123
-       5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
-       8: return
+       3: ldc           #10                 // String zm123
+       5: invokevirtual #9                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: new           #11                 // class com/plugin/lib/MyClass
+      11: dup
+      12: invokespecial #12                 // Method "<init>":()V
+      15: sipush        666
+      18: invokevirtual #13                 // Method init:(I)V
+      21: return
+
+  public java.lang.String desc();
+    Code:
+       0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: new           #3                  // class java/lang/StringBuilder
+       6: dup
+       7: invokespecial #4                  // Method java/lang/StringBuilder."<init>":()V
+      10: ldc           #14                 // String desc...
+      12: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      15: aload_0
+      16: invokevirtual #15                 // Method java/lang/Object.toString:()Ljava/lang/String;
+      19: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      22: invokevirtual #8                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      25: invokevirtual #9                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      28: aload_0
+      29: invokevirtual #15                 // Method java/lang/Object.toString:()Ljava/lang/String;
+      32: areturn
 }

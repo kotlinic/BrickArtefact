@@ -1,6 +1,6 @@
 package asm;
 
-class MyClassLoader  extends ClassLoader {
+public class MyClassLoader  extends ClassLoader {
     public Class<?> defineClassPublic(String fullName, byte[] bytes, int i, int length) {
         return defineClass(fullName, bytes, 0, length);
     }
