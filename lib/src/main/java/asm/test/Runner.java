@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 
 public class Runner {
     public static void main(String[] args) throws Exception {
-        FileInputStream fileInputStream = new FileInputStream("asm/test/ByteCodeDemo.class");
+        FileInputStream fileInputStream = new FileInputStream("D:\\work2020\\zm-bytecode\\lib\\build\\classes\\java\\main\\asm\\test\\ByteCodeDemo.class");
         ClassReader classReader = new ClassReader(fileInputStream);
         ClassWriter cw = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);
         //Java8选择ASM5，
